@@ -1,0 +1,23 @@
+name: Deploy automático no Netlify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Deploy na Netlify
+        uses: nwtgck/actions-netlify@v1.1
+        with:
+          publish-dir: ./  # muda pra dist/ se usar build com framework
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
