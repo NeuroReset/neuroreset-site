@@ -1,0 +1,9 @@
+node_modules/
+*.zip
+*.mp4
+*.psd
+.env
+dist/
+build/
+.DS_Store
+
