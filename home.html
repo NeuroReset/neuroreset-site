@@ -1122,8 +1122,8 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script type="text/javascript" src="wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js?ver=3.8.2" id="pro-preloaded-elements-handlers-js"></script>
 	
 <!-- POPUP DE OFERTA (SÓ A IMAGEM) -->
-<div id="viralPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center; display:flex;">
-  <div class="popup-container" style="position:relative;">
+<div id="viralPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center;">
+  <div style="position:relative; max-width:90%; max-height:90%;">
     <!-- SUA IMAGEM PERSONALIZADA -->
     <a href="https://app.nivopayments.com.br/checkout/3d070488-cd8c-46b7-a91d-5daf0f2e13f0" target="_blank">
       <img src="wp-content/uploads/2024/10/tua-foto-foda.png" alt="Oferta Especial" style="width:100%; height:auto; border-radius:10px;">
@@ -1134,17 +1134,14 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   </div>
 </div>
 
-<!-- ESTILO DO POPUP -->
-<style>
-  .popup-container {
-    width: 90vw;
-    height: auto;
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-</style>
-
 <!-- ATIVA O POPUP AUTOMATICAMENTE APÓS 3 SEGUNDOS -->
+<script>
+  setTimeout(function() {
+    document.getElementById('viralPopup').style.display = 'flex';
+  }, 3000);
+</script>
+
+
 <script>
   window.onload = function() {
     setTimeout(() => {
@@ -1152,7 +1149,6 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     }, 4500);
   }
 </script>
-</script>
-	
+
 </body>
 </html>
