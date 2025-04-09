@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mago dos Cortes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- DOBRA 1 -->
+    <h1>🧙‍♂️ MAGO DOS CORTES</h1>
+    <p class="subheadline">Tenha acesso instantâneo a +50.000 cortes prontos de diversos nichos pra explodir nas redes sociais — sem precisar aparecer, editar ou garimpar nada.</p>
+    
+    <!-- VSL COM SOM E CAPA -->
+    <video 
+      src="video/video-promo.mp4" 
+      controls 
+      poster="img/capa-video.webp" 
+      playsinline 
+      style="width:100%; border-radius:12px;">
+    </video>
+
+    <a href="#compra" class="botao-laranja">QUERO O ACESSO AGORA 🔥</a>
+
+    <!-- TIMER FAKE -->
+    <div class="timer" id="timer">🔥 Oferta expira em <span id="countdown">09:59</span></div>
+
+    <!-- BENEFÍCIOS -->
+    <ul>
+      <li>+50.000 vídeos prontos separados por nicho</li>
+      <li>Sem precisar editar, aparecer ou criar conteúdo</li>
+      <li>Poste direto no TikTok, Reels e Shorts</li>
+      <li>Acesso imediato via Google Drive</li>
+      <li>Libera o algoritmo com conteúdo que já viralizou</li>
+    </ul>
+
+    <!-- OFERTA E PLANOS -->
+    <h2>🔥 ESCOLHA SUA VERSÃO</h2>
+
+    <div class="order-bump">
+      <h3>💼 Versão Simples — R$ 19,90</h3>
+      <p>✔️ 50 mil vídeos virais prontos<br>❌ Sem bônus<br>❌ Sem hacks do algoritmo</p>
+    </div>
+
+    <div class="order-bump destaque">
+      <h3>🚀 Versão Completa — <s>R$ 97,00</s> <strong class="preco-promo">R$ 61,78</strong></h3>
+      <p>✔️ Pack completo +<br>✔️ Kit Editor Profissional (R$47 → R$27)<br>✔️ 90 Efeitos Sonoros Virais (R$17 → R$14,97)</p>
+      <p class="mais-vendido">MAIS VENDIDO 🔥</p>
+    </div>
+
+    <!-- CTA FINAL -->
+    <a id="compra" href="https://seulinkdecheckout.com" class="cta">GARANTIR ACESSO COMPLETO</a>
+    <p class="garantia">✅ Compra 100% segura | 💸 Garantia de 7 dias | 🚀 Entrega imediata no e-mail</p>
+
+    <!-- DEPOIMENTO -->
+    <img src="img/depoimento-fake.webp" alt="Depoimento de cliente" class="depoimento">
+
+    <!-- FAQ -->
+    <div class="faq">
+      <h3>📌 O que vou receber?</h3>
+      <p>Você recebe acesso a um Google Drive com os 50 mil vídeos prontos pra postar.</p>
+      <h3>🧠 Já vem editado?</h3>
+      <p>Sim! Mas se quiser personalizar, os bônus te dão tudo que precisa pra elevar o nível.</p>
+      <h3>📲 Funciona pra TikTok e Instagram?</h3>
+      <p>Sim. Todos os vídeos são otimizados pra viralizar nas plataformas.</p>
+      <h3>📦 Como recebo o acesso?</h3>
+      <p>Assim que concluir o pagamento, você recebe tudo por e-mail.</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Neuro Reset. Todos os direitos reservados.<br>
+    "Mago dos Cortes" é um produto independente da Neuro Reset. Esta página não é afiliada ao Facebook, Instagram, TikTok ou Google.
+  </footer>
+
+  <!-- POPUP E TIMER -->
+  <script>
+    let hasShownExitPopup = false;
+    document.addEventListener("mouseleave", function (e) {
+      if (!hasShownExitPopup && e.clientY < 10) {
+        hasShownExitPopup = true;
+        alert("Ei! Antes de sair... Essa oferta especial acaba em instantes! Garanta já seu acesso ao Mago dos Cortes!");
+      }
+    });
+
+    let mins = 9;
+    let secs = 59;
+    const countdown = document.getElementById("countdown");
+    setInterval(() => {
+      if (secs === 0) {
+        if (mins === 0) return;
+        mins--;
+        secs = 59;
+      } else {
+        secs--;
+      }
+      countdown.textContent = ${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')};
+    }, 1000);
+  </script>
+</body>
+</html>
