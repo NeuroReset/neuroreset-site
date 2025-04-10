@@ -1,82 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Compra Confirmada | Neuroreset</title>
-  
-  <!-- FACEBOOK PIXEL -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'SEU_ID_PIXEL_AQUI'); // << TROCA ESSE DESGRAÇADO PELO TEU ID
-    fbq('track', 'Purchase', {value: 97.00, currency: 'BRL'});
-  </script>
+  <title>Compra Confirmada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Importa o estilo da LP -->
+  <link rel="stylesheet" href="css/style.css">
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: #f4f4f4;
-      font-family: 'Arial', sans-serif;
-      color: #333;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-    .container {
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      max-width: 600px;
-      text-align: center;
-      box-shadow: 0 0 25px rgba(0,0,0,0.1);
-    }
-    h1 {
-      color: #008f5e;
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-    }
-    .btn {
-      background: #00c377;
-      color: white;
-      text-decoration: none;
-      padding: 15px 30px;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: background 0.3s ease;
-    }
-    .btn:hover {
-      background: #009f5e;
-    }
-    .logo {
-      max-width: 180px;
-      margin-bottom: 25px;
-    }
-  </style>
+  <!-- Facebook Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '9132703083519306');
+  fbq('track', 'Purchase', {
+    value: 19.90,
+    currency: 'BRL',
+    content_name: 'Pack Simples'
+  });
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=Purchase&noscript=1"/>
+</noscript>
+
 </head>
 <body>
-
   <div class="container">
-    <img src="https://neuroreset.com.br/logo.png" alt="Logo Neuroreset" class="logo">
-    <h1>Parabéns! Sua compra foi confirmada</h1>
-    <p>Você deu o primeiro passo para transformar sua mente e sua vida. Em instantes você receberá o acesso por e-mail ou WhatsApp.</p>
-    <a class="btn" href="https://wa.me/55SEUNUMERO" target="_blank">Falar com Suporte no WhatsApp</a>
+    <h1>🧠 ACESSO LIBERADO COM SUCESSO</h1>
+    <p class="subheadline">Agora você pode entrar no grupo de network onde os players compartilham ideias que não se postam no Instagram.</p>
+
+    <div class="faq">
+      <h3>📲 Entre no grupo VIP do WhatsApp</h3>
+      <p>É por lá que você vai receber os links dos arquivos e os bônus exclusivos!</p>
+      
+      <!-- Formulário fake só pra validação -->
+      <form id="form">
+        <input type="text" id="nome" placeholder="Seu nome" required style="width: 100%; padding: 12px; margin-bottom: 12px;">
+        <input type="tel" id="telefone" placeholder="WhatsApp com DDD" required style="width: 100%; padding: 12px; margin-bottom: 12px;">
+        <button type="submit" class="botao-verde">Liberar Acesso</button>
+      </form>
+
+      <div id="grupo" style="display: none; margin-top: 20px;">
+        <p>✅ Tudo certo! Clique abaixo para entrar:</p>
+        <a href="https://chat.whatsapp.com/ItyWcGCm3RN5SkI8G5M7GT" class="botao-verde" target="_blank">Entrar no Grupo VIP</a>
+      </div>
+    </div>
   </div>
 
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=SEU_ID_PIXEL_AQUI&ev=Purchase&noscript=1"
-  /></noscript>
+  <script>
+    const form = document.getElementById('form');
+    const grupo = document.getElementById('grupo');
 
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      grupo.style.display = 'block';
+    });
+  </script>
 </body>
 </html>
