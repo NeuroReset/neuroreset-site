@@ -164,3 +164,23 @@
     border-radius: 0;
   }
   
+
+.botao-verde {
+  background-color: #11ff00 !important;
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 16px 24px;
+  border-radius: 50px;
+  border: none;
+  text-transform: uppercase;
+  box-shadow: 0 0 12px rgba(19, 71, 0, 0.415);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin: 30px auto;
+  transition: all 0.3s ease;
+  animation: infinite ease-in-out;
+  max-width: 90%;
+}
