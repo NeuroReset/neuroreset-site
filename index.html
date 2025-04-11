@@ -3,27 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <script>
-  window.pixelId = "67e419d2f432a353e46dd52f";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
-</script>
-  
   <title>Mago dos Cortes</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <script src="js/redireciona.js"></script>
+  
   <div class="container">
     <!-- DOBRA 1 -->
-    <h1>🧙‍♂️ MAGO DOS CORTES</h1>
-    <p class="subheadline">Tenha acesso instantâneo a milhares de cortes.</p>
+    <h1>Mais de 50.000 Vídeos Prontos pra Você Crescer no TikTok, Reels e Shorts.</h1>
+    <p class="subheadline">Sem aparecer. Sem editar. Só postar.</p>
     
     <div class="bloco-video-botao">
-      <a href="https://app.nivopayments.com.br/checkout/27e81761-b995-40a0-ad5c-9ba285f7d81e" class="botao-laranja">QUERO O ACESSO AGORA 🔥</a>
+
+      <a href="#" class="botao-laranja falso">QUERO MEUS VÍDEOS</a>
+
       <video 
         src="video/video-promo.mp4" 
         controls 
@@ -33,44 +27,78 @@
       </video>
     </div>
 
-    <!-- TIMER FAKE -->
     <div class="timer" id="timer">🔥 Oferta expira em <span id="countdown">09:59</span></div>
+
+    <script>
+      let minutes = 9;
+      let seconds = 59;
+    
+      const countdownEl = document.getElementById("countdown");
+    
+      const timer = setInterval(() => {
+        if (seconds === 0) {
+          if (minutes === 0) {
+            clearInterval(timer);
+            countdownEl.innerText = "00:00";
+            // Aqui você pode redirecionar, esconder botão, mostrar alerta, etc.
+            return;
+          } else {
+            minutes--;
+            seconds = 59;
+          }
+        } else {
+          seconds--;
+        }
+    
+        const m = minutes < 10 ? "0" + minutes : minutes;
+        const s = seconds < 10 ? "0" + seconds : seconds;
+        countdownEl.innerText = `${m}:${s}`;
+      }, 1000);
+    </script>
 
     <!-- BENEFÍCIOS -->
     <ul>
-      <li>+50.000 vídeos prontos separados por nicho</li>
-      <li>Sem precisar editar, aparecer ou criar conteúdo</li>
-      <li>Poste direto no TikTok, Reels e Shorts</li>
-      <li>Acesso imediato via Google Drive</li>
-      <li>Libera o algoritmo com conteúdo que já viralizou</li>
+      <ul>✅ 50 mil vídeos por nicho</ul>
+      <ul>✅ Separados por categoria</ul>
+      <ul>✅ Vídeos que já viralizaram</ul>
+      <ul>✅ Acesso via Google Drive</ul>
     </ul>
 
     <!-- OFERTA E PLANOS -->
-    <h2>🔥 ESCOLHA SUA VERSÃO</h2>
+    <h2>COMO FUNCIONA</h2>
+ 
+    <ul>  
+      <ul>1. Clique no botão</ul>
+      <ul>2. Faça o pagamento</ul>
+      <ul>3. Receba acesso por e-mail em até 5 minutos</ul>
+    </ul>
+
+    <!-- DEPOIMENTO -->
+    <img src="img/depoimento-fake-1.jpeg" alt="Depoimento de cliente" class="depoimento">
+    <img src="img/depoimento-fake-2.jpeg" alt="Depoimento de cliente" class="depoimento">
+    <img src="img/depoimento-fake-3.jpeg" alt="Depoimento de cliente" class="depoimento">
+    <img src="img/depoimento-fake-4.jpeg" alt="Depoimento de cliente" class="depoimento">
+    <img src="img/depoimento-fake.webp" alt="Depoimento de cliente" class="depoimento">
+    <p class="garantia">✅ Compra 100% segura | 💸 Garantia de 7 dias | 🚀 Entrega imediata no e-mail</p>
 
     <div class="order-bump">
-      <h3>💼 Versão Simples — R$ 19,90</h3>
+      <h3> 
+        STARTER - R$ 19,90</h3>
       <p>✔️ 50 mil vídeos virais prontos<br>❌ Sem bônus<br>❌ Sem hacks do algoritmo</p>
     </div>
 
     <div class="order-bump destaque">
       <h3 style="font-size: 1.1rem; margin: 0; line-height: 1.4;">
-        🚀 Versão Completa<br>
-        <span style="text-decoration: line-through; opacity: 0.7;">R$ 97,00</span>
-        <span style="margin: 0 4px;">→</span>
-        <strong style="color: #00ff00;">R$ 61,78</strong>
+        PRO - R$ 61,78<br>
       </h3>        
       <p>✔️ Pack completo +<br>✔️ Kit Editor Profissional (R$47 → R$27)<br>✔️ 90 Efeitos Sonoros Virais (R$17 → R$14,97)</p>
       <p class="mais-vendido">MAIS VENDIDO 🔥</p>
     </div>
 
     <!-- CTA FINAL -->
-    <a id="compra" href="https://app.nivopayments.com.br/checkout/3d070488-cd8c-46b7-a91d-5daf0f2e13f0" class="botao-laranja">GARANTIR ACESSO COMPLETO</a>
-    <p class="garantia">✅ Compra 100% segura | 💸 Garantia de 7 dias | 🚀 Entrega imediata no e-mail</p>
-
-    <!-- DEPOIMENTO -->
-    <img src="img/depoimento-fake.webp" alt="Depoimento de cliente" class="depoimento">
-
+    <a id="compra" href="https://app.nivopayments.com.br/checkout/3d070488-cd8c-46b7-a91d-5daf0f2e13f0" class="botao-laranja">GARANTIR ACESSO PRO</a>
+    <a id="compra" href="https://app.nivopayments.com.br/checkout/27e81761-b995-40a0-ad5c-9ba285f7d81e" class="botao-laranja">QUERO ACESSO STARTER</a>
+    
     <!-- FAQ -->
     <div class="faq">
       <h3>📌 O que vou receber?</h3>
