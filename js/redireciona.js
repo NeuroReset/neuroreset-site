@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const botaoFake = document.querySelector(".botao-laranja.falso");
-    const destino = document.getElementById("STARTER");
+    const destino = document.getElementById("redic");
   
     if (botaoFake && destino) {
       botaoFake.addEventListener("click", function (e) {
