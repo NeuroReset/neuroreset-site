@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz | Neuro Reset</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .quiz-step {
+      display: none;
+    }
+    .quiz-step.active {
+      display: block;
+    }
+    .quiz-title {
+      font-size: 1.3rem;
+      color: #FFDE59;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .quiz-options button {
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>⚡ Responde rápido pra liberar o acesso</h1>
+    <p class="subheadline">Esse mini questionário ajuda a destravar sua jornada de ganho rápido no celular</p>
+
+    <!-- Etapa 1 -->
+    <div class="quiz-step active" id="step1">
+      <h2 class="quiz-title">Você tem um celular com internet?</h2>
+      <div class="quiz-options">
+        <button class="botao-laranja" onclick="nextStep()">Tenho sim!</button>
+        <button class="botao-laranja" onclick="nextStep()">Uso do meu parceiro(a)</button>
+      </div>
+    </div>
+
+    <!-- Etapa 2 -->
+    <div class="quiz-step" id="step2">
+      <h2 class="quiz-title">Quantas horas por dia consegue se dedicar?</h2>
+      <div class="quiz-options">
+        <button class="botao-laranja" onclick="nextStep()">1 a 2 horas</button>
+        <button class="botao-laranja" onclick="nextStep()">3 a 4 horas</button>
+        <button class="botao-laranja" onclick="nextStep()">Tempo livre total</button>
+      </div>
+    </div>
+
+    <!-- Etapa 3 -->
+    <div class="quiz-step" id="step3">
+      <h2 class="quiz-title">Você quer aplicar algo simples hoje e ver resultado em até 24h?</h2>
+      <div class="quiz-options">
+        <button class="botao-laranja" onclick="finalStep()">Quero agora!</button>
+        <button class="botao-laranja" onclick="finalStep()">Prefiro ver e decidir</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentStep = 1;
+    function nextStep() {
+      document.getElementById('step' + currentStep).classList.remove('active');
+      currentStep++;
+      document.getElementById('step' + currentStep).classList.add('active');
+    }
+
+    function finalStep() {
+      window.location.href = "index.html"; // Muda se seu index tiver outro nome
+    }
+  </script>
+</body>
+</html>
