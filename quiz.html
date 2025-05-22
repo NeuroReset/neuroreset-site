@@ -120,8 +120,8 @@
     <!-- Etapa 4 - Prova Social -->
     <div class="quiz-step" id="step4">
       <h2 class="quiz-title">Veja quem já aplicou o Pack Starter</h2>
-      <img src="img/publicar.png" alt="Etapa 3" class="quiz-img">
-      <img src="img/publicar.png" alt="Etapa 3" class="quiz-img">
+      <img src="img/depoimento-fake-3.jpeg" alt="Etapa 3" class="quiz-img">
+      <img src="img/depoimento-fake.webp" alt="Etapa 3" class="quiz-img">
       <div class="quiz-options">
         <button onclick="nextStep()">Quero aplicar agora também</button>
       </div>
@@ -159,7 +159,7 @@
 
   <script>
     let currentStep = 1;
-    const totalSteps = 5;
+    const totalSteps = 6;
 
     function updateProgressBar() {
       const progress = ((currentStep - 1) / (totalSteps - 1)) * 100;
@@ -172,12 +172,12 @@
 
       // Se for o passo de carregamento, mostra loading antes do final
       if (currentStep === 4) {
-        document.getElementById("step4").classList.add("active");
+        document.getElementById("step5").classList.add("active");
         updateProgressBar();
 
         setTimeout(() => {
-          document.getElementById("step4").classList.remove("active");
-          document.getElementById("step5").classList.add("active");
+          document.getElementById("step5").classList.remove("active");
+          document.getElementById("step6").classList.add("active");
           updateProgressBar();
         }, 2000); // 2 segundos
       } else {
