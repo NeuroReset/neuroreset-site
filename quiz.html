@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz | Neuro Reset</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz | Pack Viral Starter</title>
   <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff8f2;
+      color: #333;
+    }
+    .container {
+      max-width: 500px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    }
+    .progress-bar {
+      width: 100%;
+      background-color: #eee;
+      height: 10px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .progress-fill {
+      height: 100%;
+      background-color: #FF914D;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
     .quiz-step {
       display: none;
     }
@@ -14,59 +42,143 @@
     }
     .quiz-title {
       font-size: 1.3rem;
-      color: #FFDE59;
+      color: #FF914D;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
     }
-    .quiz-options button {
-      margin-bottom: 16px;
+    .quiz-img {
+      width: 100px;
+      display: block;
+      margin: 0 auto 16px;
+    }
+    .quiz-options button,
+    .quiz-options a {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      font-weight: bold;
+      background-color: #FFDE59;
+      border: none;
+      border-radius: 8px;
+      color: #000;
+      cursor: pointer;
+      font-size: 1rem;
+      text-align: center;
+      text-decoration: none;
+    }
+    .quiz-options button:hover,
+    .quiz-options a:hover {
+      background-color: #ffc107;
+    }
+    .testimonial {
+      font-style: italic;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>⚡ Responde rápido pra liberar o acesso</h1>
-    <p class="subheadline">Esse mini questionário ajuda a destravar sua jornada de ganho rápido no celular</p>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
 
     <!-- Etapa 1 -->
     <div class="quiz-step active" id="step1">
-      <h2 class="quiz-title">Você tem um celular com internet?</h2>
+      <img src="img/celular.png" alt="Etapa 1" class="quiz-img">
+      <h2 class="quiz-title">Você já tentou postar vídeos e não teve resultado?</h2>
       <div class="quiz-options">
-        <button class="botao-laranja" onclick="nextStep()">Tenho sim!</button>
-        <button class="botao-laranja" onclick="nextStep()">Uso do meu parceiro(a)</button>
+        <button onclick="nextStep()">Sim, e desanimei</button>
+        <button onclick="nextStep()">Nunca postei, mas quero</button>
+        <button onclick="nextStep()">Já postei, mas nada viraliza</button>
       </div>
     </div>
 
     <!-- Etapa 2 -->
     <div class="quiz-step" id="step2">
-      <h2 class="quiz-title">Quantas horas por dia consegue se dedicar?</h2>
+      <img src="img/tempo.png" alt="Etapa 2" class="quiz-img">
+      <h2 class="quiz-title">O que mais te trava na hora de criar conteúdo?</h2>
       <div class="quiz-options">
-        <button class="botao-laranja" onclick="nextStep()">1 a 2 horas</button>
-        <button class="botao-laranja" onclick="nextStep()">3 a 4 horas</button>
-        <button class="botao-laranja" onclick="nextStep()">Tempo livre total</button>
+        <button onclick="nextStep()">Falta de tempo</button>
+        <button onclick="nextStep()">Não sei editar</button>
+        <button onclick="nextStep()">Não sei o que funciona</button>
       </div>
     </div>
 
     <!-- Etapa 3 -->
     <div class="quiz-step" id="step3">
-      <h2 class="quiz-title">Você quer aplicar algo simples hoje e ver resultado em até 24h?</h2>
+      <img src="img/publicar.png" alt="Etapa 3" class="quiz-img">
+      <h2 class="quiz-title">Se tivesse vídeos prontos, você postaria ainda hoje?</h2>
       <div class="quiz-options">
-        <button class="botao-laranja" onclick="finalStep()">Quero agora!</button>
-        <button class="botao-laranja" onclick="finalStep()">Prefiro ver e decidir</button>
+        <button onclick="nextStep()">Com certeza</button>
+        <button onclick="nextStep()">Testaria alguns</button>
+        <button onclick="nextStep()">Sim, se fosse fácil</button>
+      </div>
+    </div>
+    
+    <!-- Etapa 4 - Carregando -->
+    <div class="quiz-step" id="step4">
+      <img src="img/analise.png" alt="Analisando" class="quiz-img">
+      <h2 class="quiz-title">🔍 Analisando suas respostas...</h2>
+      <p style="text-align:center; margin-top: 8px;">Aguarde um momento enquanto preparamos seu acesso personalizado.</p>
+    </div>
+
+    <!-- Etapa Final -->
+    <div class="quiz-step" id="step5">
+      <!-- Depoimentos em bloco -->
+      <div style="text-align: center; margin-top: 24px;">
+        <p style="font-weight: bold; margin-bottom: 8px;">📲 Quem já aplicou:</p>
+        <img src="img/depoimento-fake-4.jpeg" alt="Depoimento 1" style="max-width: 100%; border-radius: 8px; margin-bottom: 12px;">
+        <img src="img/depoimento-fake.webp" alt="Depoimento 2" style="max-width: 100%; border-radius: 8px; margin-bottom: 12px;">
+      </div>
+      <h2 class="quiz-title">🎯 Diagnóstico: Você tem o perfil ideal!</h2>
+      <p style="text-align:center; margin-bottom: 16px;">
+        Liberamos o acesso ao <strong>Pack Viral Starter</strong>:<br>
+        ✅ +2.000 vídeos prontos pra TikTok, Reels e Shorts<br>
+        ✅ Separados por nicho, já editados<br>
+        💸 Hoje por apenas <strong>R$9,90</strong> com entrega imediata!
+      </p>
+
+      <!-- Depoimento opcional -->
+      <div class="testimonial">
+        “Postei 3 vídeos do pack e já ganhei 2.300 views sem mostrar o rosto.”<br>
+        — Thiago C. (SP)
+      </div>
+
+      <div class="quiz-options">
+        <a href="https://seulinkdecheckout.com" target="_blank">🔓 LIBERAR AGORA POR R$9,90</a>
       </div>
     </div>
   </div>
 
   <script>
     let currentStep = 1;
-    function nextStep() {
-      document.getElementById('step' + currentStep).classList.remove('active');
-      currentStep++;
-      document.getElementById('step' + currentStep).classList.add('active');
+    const totalSteps = 5;
+
+    function updateProgressBar() {
+      const progress = ((currentStep - 1) / (totalSteps - 1)) * 100;
+      document.getElementById("progressFill").style.width = progress + "%";
     }
 
-    function finalStep() {
-      window.location.href = "index.html"; // Muda se seu index tiver outro nome
+    function nextStep() {
+      document.getElementById("step" + currentStep).classList.remove("active");
+      currentStep++;
+
+      // Se for o passo de carregamento, mostra loading antes do final
+      if (currentStep === 4) {
+        document.getElementById("step4").classList.add("active");
+        updateProgressBar();
+
+        setTimeout(() => {
+          document.getElementById("step4").classList.remove("active");
+          document.getElementById("step5").classList.add("active");
+          updateProgressBar();
+        }, 2000); // 2 segundos
+      } else {
+        document.getElementById("step" + currentStep).classList.add("active");
+        updateProgressBar();
+      }
     }
   </script>
 </body>
