@@ -78,6 +78,27 @@
       color: #555;
       margin-top: 20px;
     }
+    .carousel-container {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      display: flex;
+      gap: 16px;
+      padding: 20px;
+    }
+
+    .carousel {
+      display: flex;
+    }
+
+    .carousel img {
+      width: 280px;
+      height: auto;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
@@ -119,12 +140,17 @@
     
     <!-- Etapa 4 - Prova Social -->
     <div class="quiz-step" id="step4">
-      <h2 class="quiz-title">Veja quem já aplicou o Pack Starter</h2>
-      <img src="img/depoimento-fake-3.jpeg" alt="Etapa 4" >
-      <img src="img/depoimento-fake.webp" alt="Etapa 4" >
-      <div class="quiz-options">
-        <button onclick="nextStep()">Quero aplicar agora também</button>
-      </div>
+    <h2 class="quiz-title">Veja quem já aplicou o Pack Starter</h2>
+    <div class="carousel">
+      <img src="img/depoimento-fake-1.jpeg" alt="Depoimento 1" class="carousel-item">
+      <img src="img/depoimento-fake-2.jpeg" alt="Depoimento 2" class="carousel-item">
+      <img src="img/depoimento-fake.webp" alt="Depoimento 3" class="carousel-item">
+      <img src="img/depoimento-fake-3.jpeg" alt="Depoimento 4" class="carousel-item">
+      <img src="img/depoimento-fake-4.jpeg" alt="Depoimento 5" class="carousel-item">
+    </div>
+    <div class="quiz-options">
+      <button onclick="nextStep()">Quero aplicar agora também</button>
+    </div>
     </div>
 
     <!-- Etapa 5 - Carregando -->
