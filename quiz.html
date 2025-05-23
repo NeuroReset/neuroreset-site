@@ -89,15 +89,20 @@
 
     .carousel {
       display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      padding: 10px 0;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
     }
 
-    .carousel img {
+    .carousel-item {
+      flex: 0 0 auto;
       width: 280px;
       height: auto;
-      flex-shrink: 0;
       scroll-snap-align: start;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
