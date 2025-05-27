@@ -2,205 +2,162 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mago dos Cortes</title>
-  <link rel="stylesheet" href="css/style.css" />
-
-  <!-- TikTok Pixel Code Start -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
-
-  ttq.load('D0J415RC77U7JU439H5G');
-  ttq.page();
-}(window, document, 'ttq');
-</script>
-<!-- TikTok Pixel Code End -->
-  
-  <!-- Pixel UTMify -->
-  <script>
-    window.pixelId = "67e419d2f432a353e46dd52f";
-    var a = document.createElement("script");
-    a.setAttribute("async", "");
-    a.setAttribute("defer", "");
-    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-    document.head.appendChild(a);
-  </script>
-
-  <!-- UTMify Tracking -->
-  <script
-    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-    data-utmify-prevent-xcod-sck
-    data-utmify-prevent-subids
-    async
-    defer
-  ></script>
-
-  <!-- Pixel Meta Disfarçado -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src='https://connect.facebook.net/en_US/fbevents.js';
-    s=b.getElementsByTagName(e)[0];
-    setTimeout(() => { s.parentNode.insertBefore(t,s); }, 1500);
-    }(window, document,'script');
-    fbq('init', '9132703083519306');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=9132703083519306&ev=PageView&noscript=1"/>
-  </noscript>
-
-  <meta name="facebook-domain-verification" content="xvu7ku0corngkrdp73hxtbxdyhh0o4" />
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dólar Viral - Lucro em Dólar com Vídeos Virais</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #111;
+    }
+    header {
+      background: #000;
+      padding: 15px;
+      text-align: center;
+      color: white;
+    }
+    header img {
+      max-height: 60px;
+    }
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: #000;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 2em;
+      color: #ff2e2e;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.2em;
+    }
+    .cta-main {
+      background: #00c853;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 25px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section h2 {
+      color: #e60000;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      display: block;
+    }
+    .card-title {
+      background: #003366;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 1em;
+    }
+    .guarantee {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .guarantee img {
+      max-width: 120px;
+      margin: 10px auto;
+    }
+    .guarantee p {
+      font-weight: bold;
+      color: #222;
+    }
+    .footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.85em;
+    }
+  </style>
 </head>
-
 <body>
-  <script src="js/redireciona.js"></script>
+  <header>
+    <img src="img/logo-dolar-viral.png" alt="Logo Dólar Viral">
+  </header>
 
-  <div class="container">
-    <!-- DOBRA 1 -->
-    <h1>LUCRE COM VÍDEOS MONETIZADOS EM DÓLAR</h1>
-    <p class="subheadline">Monetize no TikTok de forma mais rápida com meus packs exclusivos de vídeos virais, criados para atrais visualizações e gerar renda extra em dólar. São conteúdos raros e difíceis de encontrar. Perfeitos para quem quer resultados sem perder tempo.</p>
-    
-    <div class="bloco-video-botao">
+  <section class="hero">
+    <h1>POSTA. VIRALIZA. LUCRA EM DÓLAR!</h1>
+    <p>PACOTE COM MAIS DE 40.000 VÍDEOS PRONTOS PARA EXPLODIR NO INSTAGRAM E TIKTOK SEM PRECISAR APARECER!</p>
+    <button class="cta-main">SIM! QUERO TER ACESSO AOS VÍDEOS</button>
+  </section>
 
-      <a href="#" class="botao-laranja falso">QUERO MONETIZAR!</a>
-
-      <video 
-        src="video/video-promo.mp4" 
-        controls 
-        poster="img/capa-video.webp" 
-        playsinline 
-        class="vsl-fundida">
-      </video>
-    </div>
-
-    <div class="timer" id="timer">🔥 Oferta expira em <span id="countdown">09:59</span></div>
-
-    <script>
-      let minutes = 9;
-      let seconds = 59;
-    
-      const countdownEl = document.getElementById("countdown");
-    
-      const timer = setInterval(() => {
-        if (seconds === 0) {
-          if (minutes === 0) {
-            clearInterval(timer);
-            countdownEl.innerText = "00:00";
-            // Aqui você pode redirecionar, esconder botão, mostrar alerta, etc.
-            return;
-          } else {
-            minutes--;
-            seconds = 59;
-          }
-        } else {
-          seconds--;
-        }
-    
-        const m = minutes < 10 ? "0" + minutes : minutes;
-        const s = seconds < 10 ? "0" + seconds : seconds;
-        countdownEl.innerText = `${m}:${s}`;
-      }, 1000);
-    </script>
-
-    <!-- BENEFÍCIOS -->
+  <section class="section">
+    <h2>🎯 PRA QUEM É ESSE MÉTODO?</h2>
     <ul>
-      <ul>✅ 50 mil vídeos por nicho</ul>
-      <ul>✅ Separados por categoria</ul>
-      <ul>✅ Vídeos que já viralizaram</ul>
-      <ul>✅ Acesso via Google Drive</ul>
+      <li>🔥 Pra quem quer ganhar seguidores e dólar deitado na cama</li>
+      <li>🤑 Pra quem quer vender produtos, serviços, dropshipping, cursos ou até rifa de pitbull</li>
+      <li>💣 Pra quem tá de saco cheio de quebrar a cabeça criando conteúdo</li>
     </ul>
+  </section>
 
-    <!-- OFERTA E PLANOS -->
-    <h2>COMO FUNCIONA</h2>
- 
-    <ul>  
-      <ul>1. Clique no botão</ul>
-      <ul>2. Faça o pagamento</ul>
-      <ul>3. Receba acesso por e-mail em até 5 minutos</ul>
-    </ul>
-
-    <!-- DEPOIMENTO -->
-  
-    <img src="img/depoimento-fake-1.jpeg" alt="Depoimento de cliente" class="depoimento">
-    <img src="img/depoimento-fake-2.jpeg" alt="Depoimento de cliente" class="depoimento">
-    <img src="img/depoimento-fake-3.jpeg" alt="Depoimento de cliente" class="depoimento">
-    <img src="img/depoimento-fake.webp" alt="Depoimento de cliente" class="depoimento">
-    <img src="img/depoimento-fake-4.jpeg" alt="Depoimento de cliente" class="depoimento">
-    <p class="garantia" id="redic">✅ Compra 100% segura | 💸 Garantia de 7 dias | 🚀 Entrega imediata no e-mail</p>
-
-    <div class="order-bump" id="STARTER">
-    <h3 style="font-size: 1.2rem; color: #FF5722; margin-bottom: 8px;">
-    🟠 STARTER - AGORA POR R$9,90
-    </h3>
-    <p style="margin-bottom: 6px;">✔️ 2.000 vídeos virais prontos pra usar</p>
-    <p style="margin-bottom: 6px;">✔️ Separados por nicho + som incluído</p>
-    <p style="margin-bottom: 6px;">💡 Ideal pra começar sem precisar gravar</p>
-    <p style="color: #d32f2f; font-weight: bold;">⚠️ Oferta de entrada. Valor volta a qualquer momento!</p>
+  <section class="section">
+    <h2>🔥 O QUE VOCÊ VAI RECEBER</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">PACK LIFESTYLE MILIONÁRIO</div>
+        <img src="img/pack-lifestyle.jpg" alt="Pack Lifestyle">
+      </div>
+      <div class="card">
+        <div class="card-title">MULHERES EMPODERADAS</div>
+        <img src="img/pack-mulheres.jpg" alt="Pack Mulheres">
+      </div>
+      <div class="card">
+        <div class="card-title">PACK DE CARROS</div>
+        <img src="img/pack-carros.jpg" alt="Pack Carros">
+      </div>
+      <div class="card">
+        <div class="card-title">HOMENS DE PODER</div>
+        <img src="img/pack-homens.jpg" alt="Pack Homens">
+      </div>
+      <div class="card">
+        <div class="card-title">PACK DINHEIRO</div>
+        <img src="img/pack-dinheiro.jpg" alt="Pack Dinheiro">
+      </div>
     </div>
+  </section>
 
-    <div class="order-bump destaque">
-      <h3 style="font-size: 1.1rem; margin: 0; line-height: 1.4;">
-        PRO - R$ 47,00<br>
-      </h3>        
-      <p>✔️ Pack completo(R$19,9 → R$11) +<br>✔️ Kit Editor Profissional (R$47 → R$25)<br>✔️ 90 Efeitos Sonoros Virais (R$17 → R$11)</p>
-      <p class="mais-vendido">MAIS VENDIDO 🔥</p>
-    </div>
+  <section class="section guarantee">
+    <img src="img/selo-garantia.png" alt="Selo Garantia">
+    <p>Satisfação Garantida por 7 Dias ou seu dinheiro de volta</p>
+    <button class="cta-main">QUERO ACESSO AGORA</button>
+  </section>
 
-    <!-- CTA FINAL -->
-    <a id="compra" href="https://app.nivopayoficial.com.br/checkout/3d070488-cd8c-46b7-a91d-5daf0f2e13f0" class="botao-laranja">GARANTIR ACESSO PRO</a>
-    <a id="compra" href="https://app.nivopayoficial.com.br/checkout/27e81761-b995-40a0-ad5c-9ba285f7d81e" class="botao-laranja">QUERO ACESSO STARTER</a>   
-    
-    <!-- FAQ -->
-    <div class="faq">
-      <h3>📌 O que vou receber?</h3>
-      <p>Você recebe acesso a um Google Drive com os 50 mil vídeos prontos pra postar.</p>
-      <h3>🧠 Já vem editado?</h3>
-      <p>Sim! Mas se quiser personalizar, os bônus te dão tudo que precisa pra elevar o nível.</p>
-      <h3>📲 Funciona pra TikTok e Instagram?</h3>
-      <p>Sim. Todos os vídeos são otimizados pra viralizar nas plataformas.</p>
-      <h3>📦 Como recebo o acesso?</h3>
-      <p>Assim que concluir o pagamento, você recebe tudo por e-mail.</p>
-    </div>
-  </div>
-
-  <footer>
-    © 2025 Neuro Reset. Todos os direitos reservados.<br>
-    "Mago dos Cortes" é um produto independente da Neuro Reset. Esta página não é afiliada ao Facebook, Instagram, TikTok ou Google.
+  <footer class="footer">
+    Copyright © 2025 Dólar Viral. Todos os direitos reservados.<br>
+    Este site não é afiliado ao Facebook™ ou Instagram™.
   </footer>
-
-  <!-- POPUP E TIMER -->
-  <script>
-    let hasShownExitPopup = false;
-    document.addEventListener("mouseleave", function (e) {
-      if (!hasShownExitPopup && e.clientY < 10) {
-        hasShownExitPopup = true;
-        alert("Ei! Antes de sair... Essa oferta especial acaba em instantes! Garanta já seu acesso ao Mago dos Cortes!");
-      }
-    });
-
-    let mins = 9;
-    let secs = 59;
-    const countdown = document.getElementById("countdown");
-    setInterval(() => {
-      if (secs === 0) {
-        if (mins === 0) return;
-        mins--;
-        secs = 59;
-      } else {
-        secs--;
-      }
-      countdown.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
-    }, 1000);
-  </script>
 </body>
 </html>
