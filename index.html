@@ -71,9 +71,13 @@
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .card img {
-      width: 100%;
-      display: block;
+    .card video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 0px;
+    display: block;
+    background: #000;
     }
     .card-title {
       background: #003366;
@@ -105,7 +109,7 @@
 </head>
 <body>
   <header>
-    <img src="img/logo-dolar-viral.png" alt="Logo Dólar Viral">
+    <img src="img/logo.png" alt="Logo Dólar Viral">
   </header>
 
   <section class="hero">
@@ -115,7 +119,7 @@
   </section>
 
   <section class="section">
-    <h2>🎯 PRA QUEM É ESSE MÉTODO?</h2>
+    <h2>PRA QUEM É ESSE MÉTODO?</h2>
     <ul>
       <li>🔥 Pra quem quer ganhar seguidores e dólar deitado na cama</li>
       <li>🤑 Pra quem quer vender produtos, serviços, dropshipping, cursos ou até rifa de pitbull</li>
@@ -128,29 +132,34 @@
     <div class="card-grid">
       <div class="card">
         <div class="card-title">PACK LIFESTYLE MILIONÁRIO</div>
-        <img src="img/pack-lifestyle.jpg" alt="Pack Lifestyle">
+        <video src="video/Videos-LifeStyle-1.mp4" autoplay loop muted playsinline>
+          </video>
       </div>
       <div class="card">
         <div class="card-title">MULHERES EMPODERADAS</div>
-        <img src="img/pack-mulheres.jpg" alt="Pack Mulheres">
+        <video src="video/VIDEO-20.mp4" autoplay loop muted playsinline>
+          </video>
       </div>
       <div class="card">
         <div class="card-title">PACK DE CARROS</div>
-        <img src="img/pack-carros.jpg" alt="Pack Carros">
+        <video src="video/Videos-Carros-1.mp4" autoplay loop muted playsinline>
+          </video>
       </div>
       <div class="card">
         <div class="card-title">HOMENS DE PODER</div>
-        <img src="img/pack-homens.jpg" alt="Pack Homens">
+        <video src="video/V23.mp4" autoplay loop muted playsinline>
+          </video>
       </div>
       <div class="card">
         <div class="card-title">PACK DINHEIRO</div>
-        <img src="img/pack-dinheiro.jpg" alt="Pack Dinheiro">
+        <video src="video/Video-Dinheiro-3.mp4" autoplay loop muted playsinline>
+          </video>
       </div>
     </div>
   </section>
 
   <section class="section guarantee">
-    <img src="img/selo-garantia.png" alt="Selo Garantia">
+    <img src="img/7dias.png" alt="Selo Garantia">
     <p>Satisfação Garantida por 7 Dias ou seu dinheiro de volta</p>
     <button class="cta-main">QUERO ACESSO AGORA</button>
   </section>
