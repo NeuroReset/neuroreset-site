@@ -55,7 +55,8 @@
     .section {
       padding: 40px 20px;
       max-width: 900px;
-      margin: auto;
+      margin: 0;
+
     }
     .section h2 {
       color: #e60000;
@@ -101,6 +102,7 @@
       font-weight: bold;
       color: #222;
     }
+
     .footer {
       background: #000;
       color: #fff;
@@ -108,64 +110,62 @@
       padding: 30px 20px;
       font-size: 0.85em;
     }
+
+    .quadro {
+      background-color: #000;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px auto;
+      width: 300px;
+      color: #fff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .quadro-icon {
+      font-size: 40px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
     
+    .quadro-title {
+      font-weight: bold;
+      color: #007bff;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    
+    .quadro-text {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #007bff;
+    }
 
+    .depoimento-carousel {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      display: flex;
+      padding: 10px 0;
+      gap: 16px;
+    }
 
-     .quadro {
-    background-color: #000;
-    border: 2px solid #007bff;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 15px auto;
-    width: 300px;
-    color: #fff;
-    text-align: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  .quadro-icon {
-    font-size: 40px;
-    color: #007bff;
-    margin-bottom: 10px;
-  }
-  
-  .quadro-title {
-    font-weight: bold;
-    color: #007bff;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-  
-  .quadro-text {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #007bff;
-  }
+    .depoimento-track {
+      display: flex;
+      gap: 16px;
+    }
 
-  .depoimento-carousel {
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  display: flex;
-  padding: 10px 0;
-  gap: 16px;
-}
-
-.depoimento-track {
-  display: flex;
-  gap: 16px;
-}
-
-.depoimento-track img {
-  scroll-snap-align: start;
-  flex: 0 0 auto;
-  height: 400px; /* Limita a altura para deixar mais harmonioso */
-  width: auto;
-  max-width: 250px; /* Evita que fique muito largo */
-  object-fit: cover; /* Ajusta o preenchimento visual */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+    .depoimento-track img {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+      height: 400px; /* Limita a altura para deixar mais harmonioso */
+      width: auto;
+      max-width: 250px; /* Evita que fique muito largo */
+      object-fit: cover; /* Ajusta o preenchimento visual */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
 
   </style>
 </head>
@@ -274,10 +274,65 @@
     </div>
   </section>
 
+  <section class="section" style="background:#000; color:#fff; text-align:center;">
+  <h2 style="color:#00ff99;">ESCOLHA A MELHOR OFERTA PARA VOCÊ!</h2>
+  <div style="background:#111; padding:20px; border-radius:12px; max-width:320px; margin: 0 auto;">
+    <p style="text-decoration: line-through; color:#ccc;">DE R$ 47,97 POR APENAS</p>
+    <h1 style="font-size:2.5em; color:#00ff99;">R$ 5,70</h1>
+    <ul style="text-align:left; list-style:none; padding:0; color:#fff;">
+      <li>✅ Pack Básico</li>
+      <li>✅ Bônus Hashtags Estratégicas</li>
+      <li>✅ Acesso por 8 meses</li>
+    </ul>
+    <button class="cta-main" style="margin-top:15px;">SIM! QUERO ESSA OPÇÃO</button>
+    <p style="font-size:0.8em; margin-top:10px; color:#f00;">MAS ANTES DE COMPRAR...<br><span style="color:#fff">Temos uma oferta AINDA MAIS vantajosa pra você!<br>Leve mais e pague menos, 97% escolhem a nossa <strong style="color:#f00">MEGA OFERTA!</strong></span></p>
+  </div>
+</section>
+
+
+<section class="section" style="background:#000; color:#fff; text-align:center;">
+  <h2 style="color:#00ff99;">ESCOLHA A MELHOR OFERTA PARA VOCÊ!</h2>
+  <div style="background:#111; padding:20px; border-radius:12px; max-width:320px; margin: 0 auto;">
+    <p style="text-decoration: line-through; color:#ccc;">DE R157,00 POR APENAS</p>
+    <h1 style="font-size:2.5em; color:#00ff99;">R$ 16,97</h1>
+    <h2>🔥 VOCÊ VAI RECEBER TUDO ISSO:</h2>
+  <ul style="text-align:left; max-width:500px; margin:auto; font-size:0.9em;">
+    <li>✅ Mega Pack com +40 MIL Vídeos <span style="color:red;">R$ 594,97</span></li>
+    <li>✅ Vídeos Virais de Games +100 Vídeos</li>
+    <li>✅ Vídeos Virais de Comédia +150 Vídeos</li>
+    <li>✅ Vídeos Virais de Filmes e Séries +200 Vídeos</li>
+    <li>✅ Vídeos Virais de Memes +60 Vídeos</li>
+    <li>✅ Vídeos Virais de Impactantes +120 Vídeos</li>
+    <li>✅ Cortes Virais de Podcast <span style="color:red;">R$97,00</span></li>
+    <li>✅ Pablo Marçal +80 Cortes</li>
+    <li>✅ Thiago (Primo Rico) +70 Cortes</li>
+    <li>✅ Renato Cariani +60 Cortes</li>
+    <li>✅ E muito mais...</li>
+    <li>✅ Bônus #1 Mulheres Empoderadas +80 Vídeos <span style="color:red;">R$57,97</span></li>
+    <li>✅ Bônus #2 Homens de Poder +40 Vídeos <span style="color:red;">R$57,97</span></li>
+    <li>✅ Bônus #3 Pack de Carros +70 Vídeos <span style="color:red;">R$57,97</span></li>
+    <li>✅ Bônus #4 Pack Dinheiro +80 Vídeos <span style="color:red;">R$47,97</span></li>
+    <li>✅ Bônus #5 Pack Lifestyle Milionário +400 Vídeos <span style="color:red;">R$47,97</span></li>
+    <li>✅ Bônus #6 Lifestyle Academia +100 Vídeos <span style="color:red;">R$47,97</span></li>
+    <li>✅ Bônus #7 Lifestyle Neve +40 Vídeos <span style="color:red;">R$47,97</span></li>
+    <li>✅ Bônus #8 Vídeos de Liberdade +60 Vídeos <span style="color:red;">R$47,97</span></li>
+    <li>✅ Bônus #9 Vídeos Virais Destruindo Células +200 Vídeos <span style="color:red;">R$47,97</span></li>
+    <li>✅ Bônus #10 Vídeos Cortando as Células de Vício <span style="color:red;">R$47,97</span></li>
+    <li>✅ Bônus #11 Glamour +40 Vídeos <span style="color:red;">R$47,97</span></li>
+    <li>✅ Bônus #12 Hashtags Estratégicas</li>
+    <li>✅ Bônus #13 Curso Básico de CupCut</li>
+    <li>✅ Garantia Incondicional de 30 Dias</li>
+    <li>✅ Acesso Imediato e Vitalício</li>
+  </ul>
+    <button class="cta-main" style="margin-top:15px;">SIM! QUERO ESSA OPÇÃO</button>
+    <p style="font-size:0.8em; margin-top:10px; color:#f00;">MAS ANTES DE COMPRAR...<br><span style="color:#fff">Temos uma oferta AINDA MAIS vantajosa pra você!<br>Leve mais e pague menos, 97% escolhem a nossa <strong style="color:#f00">MEGA OFERTA!</strong></span></p>
+  </div>
+</section>
+
   <section class="section guarantee">
     <img src="img/7dias.png" alt="Selo Garantia">
     <p>Satisfação Garantida por 7 Dias ou seu dinheiro de volta</p>
-    <button class="cta-main">QUERO ACESSO AGORA</button>
+
   </section>
 
   <footer class="footer">
@@ -286,3 +341,4 @@
   </footer>
 </body>
 </html>
+
