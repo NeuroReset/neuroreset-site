@@ -6,6 +6,7 @@
   <title>Biblioteca de Sucesso - Lucro em Dólar com Vídeos Virais</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
   <style>
     body {
@@ -140,6 +141,32 @@
     line-height: 1.5;
     color: #007bff;
   }
+
+  .depoimento-carousel {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  padding: 10px 0;
+  gap: 16px;
+}
+
+.depoimento-track {
+  display: flex;
+  gap: 16px;
+}
+
+.depoimento-track img {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  height: 400px; /* Limita a altura para deixar mais harmonioso */
+  width: auto;
+  max-width: 250px; /* Evita que fique muito largo */
+  object-fit: cover; /* Ajusta o preenchimento visual */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
   </style>
 </head>
 <body>
@@ -167,12 +194,23 @@
   </section>
       
   <section class="section">
-    <p style="text-align: center; color: #ff0000; font-size: 24px;"><strong>PRA QUEM É ESSE METODO?</strong></span></p>
-      <P>🔥 Pra quem quer ganhar seguidores e dólar deitado na cama</P>
-      <P>🤑 Pra quem quer vender produtos, serviços, dropshipping, cursos ou até rifa de pitbull</P>
-      <P>💣 Pra quem tá de saco cheio de quebrar a cabeça criando conteúdo</P>
+    <p style="text-align: center; color: #ff0000; font-size: 24px;"><strong>🎯 PRA QUEM É ESSE MÉTODO?</strong></p>
+    <p>😴 Pra quem quer ganhar seguidores e dólar deitado na cama</p>
+    <p>💸 Pra quem quer vender produtos, serviços, dropshipping, cursos ou até rifa de pitbull</p>
+    <p>😩 Pra quem tá de saco cheio de quebrar a cabeça criando conteúdo</p>
   </section>
 
+  <p style="text-align: center; color: #000000; font-size: 24px;"><strong>OLHA OS RESULTADOS DE QUEM COMPROU:</strong></span></p>
+  <div class="depoimento-carousel">
+    <div class="depoimento-track">
+      <img src="img/depoimento fake.jpeg" alt="Depoimento 1">
+      <img src="img/depoimento-fake-1.jpeg" alt="Depoimento 2">
+      <img src="img/depoimento-fake-2.jpeg" alt="Depoimento 3">
+      <img src="img/depoimento-fake-3.jpeg" alt="Depoimento 4">
+      <img src="img/depoimento-fake-4.jpeg" alt="Depoimento 5">
+    </div>
+
+  </div>
     <div class="quadro">
     <div class="quadro-icon"><i class="fas fa-smile"></i></div>
     <div class="quadro-title">INÍCIO FÁCIL E RÁPIDO</div>
