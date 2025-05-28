@@ -52,6 +52,19 @@
       cursor: pointer;
       box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
     }
+    .cta-pulse {
+      background: #00c853;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 25px;
+      animation: pulseGlow 1.5s infinite ease-in-out;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
+    }
     .cta-red {
       background: red;
       padding: 15px 25px;
@@ -191,7 +204,7 @@
     <p style="max-width: 320px; margin: 0 auto; font-size: 0.9em; line-height: 1.4;">
       PACOTE COM MAIS DE <strong>40.000 VÍDEOS</strong> PRONTOS PARA EXPLODIR NO <strong>INSTAGRAM</strong> E <strong>TIKTOK</strong> SEM PRECISAR APARECER!
     </p>
-    <button class="cta-main" style="margin-top:15px;">QUERO TER ACESSO AOS VÍDEOS</button>
+    <button class="cta-pulse" style="margin-top:15px;">QUERO TER ACESSO AOS VÍDEOS</button>
     <img src="img/mockup.png" alt="Mockup" style="max-width: 280px; margin-top: 20px;">
   </section>
 
@@ -296,7 +309,7 @@
   </section>
 
   <section class="section" style="background:#000; color:#fff; text-align:center;">
-  <h2 style="color:#ffffff;">ESCOLHA A MELHOR OFERTA PARA VOCÊ!</h2>
+  <h2 id= "redic" style="color:#ffffff;">ESCOLHA A MELHOR OFERTA PARA VOCÊ!</h2>
   <div style="background:#111; padding:20px; border-radius:12px; max-width:320px; margin: 0 auto;">
     <p style="text-decoration: line-through; color:#ccc;">DE R$ 47,97 POR APENAS</p>
     <h1 style="font-size:2.5em; color:#00c64c;">R$ 5,70</h1>
@@ -315,7 +328,7 @@
     <button  class="cta-red" style="margin-top:15px; ">MAIS ESCOLHIDO</button>
     <h1 style="font-size:2.0em; color:#f00">MEGA OFERTA</strong></span></h1>
     
-    <img src="img/mockup.png">
+    <img src="img/mockup.png" alt="Mockup" style="max-width: 280px; margin-top: 20px;">
 
     <p style="text-decoration: line-through; color:#000000;">DE R157,00 POR APENAS</p>
     <h1 style="font-size:2.5em; color:#00c64c;">R$ 16,97</h1>
@@ -390,27 +403,7 @@
     Este site não é afiliado ao Facebook™ ou Instagram™.
   </footer>
 
-  <script>
-    let totalTime = 5 * 60;
-    const minutosEl = document.getElementById("minutos");
-    const segundosEl = document.getElementById("segundos");
-
-    const countdown = setInterval(() => {
-      const minutos = Math.floor(totalTime / 60);
-      const segundos = totalTime % 60;
-
-      minutosEl.innerHTML = `${minutos.toString().padStart(2, '0')}<br><small>Minutos</small>`;
-      segundosEl.innerHTML = `${segundos.toString().padStart(2, '0')}<br><small>Segundos</small>`;
-
-      if (totalTime <= 0) {
-        clearInterval(countdown);
-        minutosEl.innerHTML = `00<br><small>Minutos</small>`;
-        segundosEl.innerHTML = `00<br><small>Segundos</small>`;
-      }
-
-      totalTime--;
-    }, 1000);
-  </script>
+  <script src="js/redireciona.js"></script>
 
 </body>
 </html>
