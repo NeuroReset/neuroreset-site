@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Biblioteca de Sucesso - Lucro em Dólar com Vídeos Virais</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #111;
+    }
+    header {
+      background: #000;
+      padding: 5px;
+      text-align: center;
+      color: white;
+    }
+    header img {
+      max-height: 120px;
+    }
+    .hero {
+      text-align: center;
+      padding: 20px 20px;
+      background: #000;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 1.2em;
+      color: #ff2e2e;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 0.7em;
+    }
+    .cta-main {
+      background: #00c853;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 25px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
+    }
+    .cta-pulse {
+      background: #00c853;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 25px;
+      animation: pulseGlow 1.5s infinite ease-in-out;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
+    }
+    .cta-red {
+      background: red;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 25px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0;
+
+    }
+    .section h2 {
+      color: #e60000;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 0px;
+    display: block;
+    background: #000;
+    }
+    .card-title {
+      background: #003366;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 1em;
+    }
+    .guarantee {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .guarantee img {
+      max-width: 120px;
+      margin: 10px auto;
+    }
+    .guarantee p {
+      font-weight: bold;
+      color: #222;
+    }
+
+    .footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.85em;
+    }
+
+    .quadro {
+      background-color: #000;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px auto;
+      width: 300px;
+      color: #fff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .quadro-icon {
+      font-size: 40px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    
+    .quadro-title {
+      font-weight: bold;
+      color: #007bff;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    
+    .quadro-text {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #007bff;
+    }
+
+    .depoimento-carousel {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      display: flex;
+      padding: 10px 0;
+      gap: 16px;
+    }
+
+    .depoimento-track {
+      display: flex;
+      gap: 16px;
+    }
+
+    .depoimento-track img {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+      height: 400px; /* Limita a altura para deixar mais harmonioso */
+      width: auto;
+      max-width: 250px; /* Evita que fique muito largo */
+      object-fit: cover; /* Ajusta o preenchimento visual */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .top-bar {
+      background-color: #ff0000; /* Vermelho forte */
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header class="top-bar"></header>
+
+  <section class="section" style="background:#000; color:#000000; text-align:center;">
+    <div style="background:#ffffff; padding:20px; border-radius:12px; max-width:320px; margin: 0 auto;">
+
+      <h1 style="font-size:2.0em; color:rgb(0, 0, 0);">
+        <strong>Espera!</strong> 
+        <span style="font-size:1.2em; color:#ff0000;">
+          <strong style="color:rgb(255, 0, 0);">Preparamos um desconto Especial de Até 78% para você...</strong> 
+        </span>
+      </h1>
+
+      <img src="img/mockup.png" alt="Mockup" style="max-width: 280px; margin-top: 20px;">
+
+      <p style="text-decoration: line-through; color:#000000;">DE R157,00 POR APENAS</p>
+      <h1 style="font-size:2.5em; color:#00c64c;">R$ 16,97</h1>
+      <div style="display: flex; justify-content: center; gap:10px; margin-top:10px;">
+      <div id="minutos" style="background:#001f4d; color:#fff; padding:10px 15px; border-radius:5px; font-size:1em;">
+        05<br><small>Minutos</small>
+      </div>
+      <div id="segundos" style="background:#001f4d; color:#fff; padding:10px 15px; border-radius:5px; font-size:1em;">
+        00<br><small>Segundos</small>
+      </div>
+    </div>
+
+    <ul style="list-style:none; padding: 0; max-width: 400px; margin: 0 auto; text-align:left;">
+      <li>✅ Mega Pack com +40 MIL Vídeos <span style="color:red;">R$ 594,97</span></li>
+      <li>✅ Vídeos Virais de Games +100 Vídeos</li>
+      <li>✅ Vídeos Virais de Comédia +150 Vídeos</li>
+      <li>✅ Vídeos Virais de Filmes e Séries +200 Vídeos</li>
+      <li>✅ Vídeos Virais de Memes +60 Vídeos</li>
+      <li>✅ Vídeos Virais de Impactantes +120 Vídeos</li>
+      <li>✅ Cortes Virais de Podcast <span style="color:red;">R$97,00</span></li>
+      <li>✅ Pablo Marçal +80 Cortes</li>
+      <li>✅ Thiago (Primo Rico) +70 Cortes</li>
+      <li>✅ Renato Cariani +60 Cortes</li>
+      <li>✅ E muito mais...</li>
+      <li>✅ Bônus #1 Mulheres Empoderadas +80 Vídeos <span style="color:red;">R$57,97</span></li>
+      <li>✅ Bônus #2 Homens de Poder +40 Vídeos <span style="color:red;">R$57,97</span></li>
+      <li>✅ Bônus #3 Pack de Carros +70 Vídeos <span style="color:red;">R$57,97</span></li>
+      <li>✅ Bônus #4 Pack Dinheiro +80 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #5 Pack Lifestyle Milionário +400 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #6 Lifestyle Academia +100 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #7 Lifestyle Neve +40 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #8 Vídeos de Liberdade +60 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #9 Vídeos Virais Destruindo Células +200 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #10 Vídeos Cortando as Células de Vício <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #11 Glamour +40 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #12 Hashtags Estratégicas</li>
+      <li>✅ Bônus #13 Curso Básico de CupCut</li>
+      <li>✅ Garantia Incondicional de 30 Dias</li>
+      <li>✅ Acesso Imediato e Vitalício</li>
+    </ul>
+      <button class="cta-main" style="margin-top:15px;">SIM! QUERO ESSA OPÇÃO</button>
+      <p style="color:#f00"> <strong style="color:#f00">Você não vai encontrar esse preço depois (Restam Apenas 11 Vagas).</strong></span></p>
+  </section>
+
+  <footer class="footer">
+    Copyright © 2025 Biblioteca de sucesso. Todos os direitos reservados.<br>
+    Este site não é afiliado ao Facebook™ ou Instagram™.
+  </footer>
+
+  <script src="js/redireciona.js"></script>
+
+</body>
+</html>
