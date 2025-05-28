@@ -1,11 +1,15 @@
+console.log(document.querySelectorAll(".cta-pulse")); // Ver se está pegando os botões
+
 document.addEventListener("DOMContentLoaded", function () {
-    const botaoFake = document.querySelector(".cta-pulse");
+    const botaoFake = document.querySelectorAll(".cta-pulse");
     const destino = document.getElementById("redic");
-  
-    if (botaoFake && destino) {
-      botaoFake.addEventListener("click", function (e) {
-        e.preventDefault();
-        destino.scrollIntoView({ behavior: "smooth" });
+    
+    if (botaoFake.length && destino) {
+      botaoFake.forEach(function (botao) {
+        botao.addEventListener("click", function (e) {
+          e.preventDefault();
+          destino.scrollIntoView({ behavior: "smooth" });
+        });
       });
     }
   });
