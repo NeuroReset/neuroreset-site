@@ -6,9 +6,203 @@
   <title>Biblioteca de Sucesso - Lucro em Dólar com Vídeos Virais</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  <script src="js/redireciona.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #111;
+    }
+    header {
+      background: #000;
+      padding: 5px;
+      text-align: center;
+      color: white;
+    }
+    header img {
+      max-height: 120px;
+    }
+    .hero {
+      text-align: center;
+      padding: 20px 20px;
+      background: #000;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 1.2em;
+      color: #ff2e2e;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 0.7em;
+    }
+    .cta-main {
+      background: #00c853;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 25px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
+    }
+    .cta-pulse {
+      background: #00c853;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 25px;
+      animation: pulseGlow 1.5s infinite ease-in-out;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
+    }
+    .cta-red {
+      background: red;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 25px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0;
+
+    }
+    .section h2 {
+      color: #e60000;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 0px;
+    display: block;
+    background: #000;
+    }
+    .card-title {
+      background: #003366;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 1em;
+    }
+    .guarantee {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .guarantee img {
+      max-width: 120px;
+      margin: 10px auto;
+    }
+    .guarantee p {
+      font-weight: bold;
+      color: #222;
+    }
+
+    .footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.85em;
+    }
+
+    .quadro {
+      background-color: #000;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px auto;
+      width: 300px;
+      color: #fff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .quadro-icon {
+      font-size: 40px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    
+    .quadro-title {
+      font-weight: bold;
+      color: #007bff;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    
+    .quadro-text {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #007bff;
+    }
+
+    .depoimento-carousel {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      display: flex;
+      padding: 10px 0;
+      gap: 16px;
+    }
+
+    .depoimento-track {
+      display: flex;
+      gap: 16px;
+    }
+
+    .depoimento-track img {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+      height: 400px; /* Limita a altura para deixar mais harmonioso */
+      width: auto;
+      max-width: 250px; /* Evita que fique muito largo */
+      object-fit: cover; /* Ajusta o preenchimento visual */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .top-bar {
+      background-color: #ff0000; /* Vermelho forte */
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+  </style>
 </head>
 
 <body>
