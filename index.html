@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src='https://connect.facebook.net/en_US/fbevents.js';
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script');
+    fbq('init', '9132703083519306'); 
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=9132703083519306&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Biblioteca de Sucesso - Lucro em Dólar com Vídeos Virais</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
+  
   <style>
     body {
       margin: 0;
@@ -423,6 +442,42 @@
   </footer>
 
   <script src="js/redireciona.js"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > window.innerHeight / 2 && typeof fbq === "function") {
+        fbq('track', 'ViewContent');
+      }
+    }, { once: true });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Botões “Quero ter acesso aos vídeos”
+      document.querySelectorAll('.cta-pulse').forEach(btn => {
+        btn.addEventListener('click', () => {
+          fbq('trackCustom', 'ClickAcessoVideos');
+        });
+      });
+
+      // Botão oferta menor - R$7,40
+      const botaoMenor = document.querySelector('a[href*="neuroreset.com.br/upsell"]');
+      if (botaoMenor) {
+        botaoMenor.addEventListener('click', () => {
+          fbq('trackCustom', 'ClickOfertaMenor');
+        });
+      }
+
+      // Botão MEGA OFERTA - R$47,00
+      const botaoMega = document.querySelector('a[href*="nivopayoficial.com.br/checkout"]');
+      if (botaoMega) {
+        botaoMega.addEventListener('click', () => {
+          fbq('trackCustom', 'ClickMegaOferta');
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>
