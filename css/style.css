@@ -50,7 +50,7 @@
     text-align: center;
     text-decoration: none;
     display: block;
-    margin: 30px auto;
+    margin: 0px auto;
     transition: all 0.3s ease;
     animation: pulseGlow 1.5s infinite ease-in-out;
     max-width: 90%;
@@ -183,4 +183,25 @@
   transition: all 0.3s ease;
   animation: infinite ease-in-out;
   max-width: 90%;
+}
+
+/* Animação de pulso pro botão chamar atenção */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(0, 200, 83, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 200, 83, 0);
+  }
+}
+
+/* Classe que aplica a animação */
+.pulse {
+  animation: pulse 1.5s infinite;
 }
