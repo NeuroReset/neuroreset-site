@@ -286,24 +286,34 @@
   <script src="js/redireciona.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <script>
+    function getUTMs() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const utms = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
+        .map(param => urlParams.get(param) ? `${param}=${urlParams.get(param)}` : null)
+        .filter(Boolean)
+        .join('&');
+      return utms ? `?${utms}` : '';
+    }
+
     document.getElementById('upsellSim').addEventListener('click', function (e) {
       e.preventDefault();
       fbq('trackCustom', 'ClickUpsellSim');
-      fbq('trackCustom', 'InitiateCheckout');
+      fbq('track', 'InitiateCheckout');
       setTimeout(() => {
-        window.location.href = 'https://www.ggcheckout.com/checkout/v2/QIxkv1BGLmBsZN7Qfp46';
+        window.location.href = 'https://www.ggcheckout.com/checkout/v2/QIxkv1BGLmBsZN7Qfp46' + getUTMs();
       }, 250);
     });
 
     document.getElementById('upsellNao').addEventListener('click', function (e) {
       e.preventDefault();
       fbq('trackCustom', 'ClickUpsellNao');
-      fbq('trackCustom', 'InitiateCheckout');
+      fbq('track', 'InitiateCheckout');
       setTimeout(() => {
-        window.location.href = 'https://www.ggcheckout.com/checkout/v2/JgE7IbuoWLdCz0pYzIDM';
+        window.location.href = 'https://www.ggcheckout.com/checkout/v2/JgE7IbuoWLdCz0pYzIDM' + getUTMs();
       }, 250);
     });
   </script>
+
 
 </body>
 </html>
