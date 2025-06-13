@@ -289,6 +289,7 @@
     document.getElementById('upsellSim').addEventListener('click', function (e) {
       e.preventDefault();
       fbq('trackCustom', 'ClickUpsellSim');
+      fbq('track', 'InitiateCheckout');
       setTimeout(() => {
         window.location.href = 'https://www.ggcheckout.com/checkout/v2/QIxkv1BGLmBsZN7Qfp46';
       }, 250);
@@ -297,6 +298,7 @@
     document.getElementById('upsellNao').addEventListener('click', function (e) {
       e.preventDefault();
       fbq('trackCustom', 'ClickUpsellNao');
+      fbq('track', 'InitiateCheckout');
       setTimeout(() => {
         window.location.href = 'https://www.ggcheckout.com/checkout/v2/JgE7IbuoWLdCz0pYzIDM';
       }, 250);
