@@ -491,20 +491,19 @@
     document.addEventListener("DOMContentLoaded", function () {
       const linksCheckout = document.querySelectorAll('a[href*="ggcheckout.com"], a[href*="neuroreset.com.br"]');
 
-      const utmParams = new URLSearchParams(window.location.search);
+      const urlParams = new URLSearchParams(window.location.search);
       const storedClickId = localStorage.getItem('utmify_click_id');
 
       linksCheckout.forEach(link => {
         const url = new URL(link.href);
         
-        // Adiciona UTMs se existirem na URL original
         ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(param => {
-          if (utmParams.get(param)) {
-            url.searchParams.set(param, utmParams.get(param));
+          const value = urlParams.get(param);
+          if (value) {
+            url.searchParams.set(param, value);
           }
         });
 
-        // Injeta click_id
         if (storedClickId) {
           url.searchParams.set('click_id', storedClickId);
         }
