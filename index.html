@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,25 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src='https://connect.facebook.net/en_US/fbevents.js';
-    s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script');
-    fbq('init', '9132703083519306'); 
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=9132703083519306&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
-  
   <style>
     body {
       margin: 0;
@@ -438,70 +420,13 @@
     Este site não é afiliado ao Facebook™ ou Instagram™.
   </footer>
   
-  <script src="js/redireciona.js"></script>
-    
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-  <script>
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > window.innerHeight / 2 && typeof fbq === "function") {
-        fbq('track', 'ViewContent');
-      }
-    }, { once: true });
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Botões “Quero ter acesso aos vídeos”
-      document.querySelectorAll('.cta-pulse').forEach(btn => {
-        btn.addEventListener('click', () => {
-          fbq('trackCustom', 'ClickAcessoVideos');
-        });
-      });
-
-      // Botão oferta menor - R$7,40
-      const botaoMenor = document.querySelector('a[href*="neuroreset.com.br/upsell"]');
-      if (botaoMenor) {
-        botaoMenor.addEventListener('click', () => {
-          fbq('trackCustom', 'ClickOfertaMenor');
-        });
-      }
-
-      // Botão MEGA OFERTA - R$47,00
-      const botaoMega = document.querySelector('a[href*="https://www.ggcheckout.com/checkout/v2/VfPs6l0TlnACbjs3xhF7"]');
-      if (botaoMega) {
-        botaoMega.addEventListener('click', () => {
-          fbq('trackCustom', 'ClickMegaOferta');
-          fbq('track', 'InitiateCheckout');
-        });
-      }
-    });
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const linksCheckout = document.querySelectorAll('a[href*="ggcheckout.com"], a[href*="neuroreset.com.br"]');
-
-      const urlParams = new URLSearchParams(window.location.search);
-      const storedClickId = localStorage.getItem('utmify_click_id');
-
-      linksCheckout.forEach(link => {
-        const url = new URL(link.href);
-        
-        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(param => {
-          const value = urlParams.get(param);
-          if (value) {
-            url.searchParams.set(param, value);
-          }
-        });
-
-        if (storedClickId) {
-          url.searchParams.set('click_id', storedClickId);
-        }
-
-        link.href = url.toString();
-      });
-    });
+   <script>
+    window.pixelId = "684c7a97b21e8e0ccca90ec8";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
   </script>
 </body>
 </html>
