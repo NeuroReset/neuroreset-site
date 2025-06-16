@@ -1,33 +1,502 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bem-vindo</title>
-  <meta name="description" content="Página inicial oficial.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Biblioteca de Sucesso - Lucro em Dólar com Vídeos Virais</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <style>
     body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #111;
+    }
+    header {
+      background: #000;
+      padding: 5px;
+      text-align: center;
+      color: white;
+    }
+    header img {
+      max-height: 120px;
+    }
+    .hero {
+      text-align: center;
+      padding: 20px 20px;
+      background: #000;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 1.2em;
+      color: #ff2e2e;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 0.7em;
+    }
+    .cta-main {
+      background: #00c853;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 25px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
+    }
+    .cta-pulse {
+      background: #00c853;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 25px;
+      animation: pulseGlow 1.5s infinite ease-in-out;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
+    }
+    .cta-red {
+      background: red;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 25px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0;
+
+    }
+    .section h2 {
+      color: #e60000;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 0px;
+    display: block;
+    background: #000;
+    }
+    .card-title {
+      background: #003366;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 1em;
+    }
+    .guarantee {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .guarantee img {
+      max-width: 120px;
+      margin: 10px auto;
+    }
+    .guarantee p {
+      font-weight: bold;
+      color: #222;
+    }
+
+    .footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.85em;
+    }
+
+    .quadro {
+      background-color: #000;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px auto;
+      width: 300px;
+      color: #fff;
+      text-align: center;
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
+    }
+
+    .quadro-icon {
+      font-size: 40px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    
+    .quadro-title {
+      font-weight: bold;
+      color: #007bff;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    
+    .quadro-text {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #007bff;
+    }
+
+    .depoimento-carousel {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      display: flex;
+      padding: 10px 0;
+      gap: 16px;
+    }
+
+    .depoimento-track {
+      display: flex;
+      gap: 16px;
+    }
+
+    .depoimento-track img {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+      height: 400px; /* Limita a altura para deixar mais harmonioso */
+      width: auto;
+      max-width: 250px; /* Evita que fique muito largo */
+      object-fit: cover; /* Ajusta o preenchimento visual */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .top-bar {
+      background-color: #ff0000; /* Vermelho forte */
+      padding: 10px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
-      flex-direction: column;
+      gap: 10px;
+      flex-wrap: wrap;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      font-size: 1.2rem;
-    }
+
   </style>
 </head>
+
 <body>
-  <h1>Hello, World!</h1>
-  <p>Esta é a página inicial oficial.</p>
+  <script>
+    window.pixelId = "684c7a97b21e8e0ccca90ec8";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+  <header class="top-bar"></header>
+
+  <section class="hero" style="background: url('img/backgroundmoney.png') center center no-repeat; background-size: cover; text-align: center; padding: 40px 20px; color: white;">
+    <img src="img/bibliotecadesucesso.png" alt="Logo Dólar Viral" class="logo" style="max-width: 150px; margin-top: 0px;">
+    <h1 style="color: #ff2e2e;">POSTA. VIRALIZA. LUCRA EM DÓLAR!</h1>
+    <p style="max-width: 320px; margin: 0 auto; font-size: 0.9em; line-height: 1.4;">
+      PACOTE COM MAIS DE <strong>40.000 VÍDEOS</strong> PRONTOS PARA EXPLODIR NO <strong>INSTAGRAM</strong> E <strong>TIKTOK</strong> SEM PRECISAR APARECER!
+    </p>
+    <button class="cta-pulse" style="margin-top:15px;">QUERO TER ACESSO AOS VÍDEOS</button>
+    <img src="img/mockup.png" alt="Mockup" style="max-width: 280px; margin-top: 20px;">
+  </section>
+
+
+  <section class="section" style="background:#f8f8f8; text-align:center; padding: 40px 20px; max-width: 900px; margin:auto;">
+    <h2 style="color:#e60000;">O QUE É A <span style="color: #e60000;">BIBLIOTECA DE SUCESSO?</span></h2>
+    <p>Cansado de se matar pra criar conteúdo e não sair do zero?</p>
+    <p>Então acorda e presta atenção:</p>
+    <p><strong>Eu juntei O QUE REALMENTE FUNCIONA — vídeos moldados pra EXPLODIR de view, engajamento e faturamento no TikTok e Instagram!</strong></p>
+    <p>Zero complicação: só baixar, postar e ver o bagulho bater view atrás de view, enchendo seu bolso de grana.</p>
+    <ul style="list-style:none; padding: 0; max-width: 500px; margin: 0 auto; text-align:left;">
+      <li style="margin: 10px 0;">✅ Mais de <strong>5.000 vídeos virais</strong> prontos.</li>
+      <li style="margin: 10px 0;">✅ Templates fáceis e rápidos de customizar.</li>
+      <li style="margin: 10px 0;">✅ Ideias afiadas pra legenda e CTA que convertem.</li>
+      <li style="margin: 10px 0;">✅ Atualizações semanais automáticas</li>
+    </ul>
+  </section>
+   
+      
+  <section class="section">
+    <p style="text-align: center; color: #ff0000; font-size: 24px;"><strong>🎯 PRA QUEM É ESSE MÉTODO?</strong></p>
+    <p>😴 Pra quem quer ganhar seguidores e dólar deitado na cama</p>
+    <p>💸 Pra quem quer vender produtos, serviços, dropshipping, cursos ou até rifa de pitbull</p>
+    <p>😩 Pra quem tá de saco cheio de quebrar a cabeça criando conteúdo</p>
+  </section>
+
+  <section>
+    <p style="text-align: center; color: #000000; font-size: 24px;"><strong>RESULTADOS DE QUEM COMPROU:</strong></span></p>
+    <div class="depoimento-carousel">
+      <div class="depoimento-track">
+        <img src="img/depoimento fake.jpeg" alt="Depoimento 1">
+        <img src="img/depoimento-fake-1.jpeg" alt="Depoimento 2">
+        <img src="img/depoimento-fake-2.jpeg" alt="Depoimento 3">
+        <img src="img/depoimento-fake-3.jpeg" alt="Depoimento 4">
+        <img src="img/depoimento-fake-4.jpeg" alt="Depoimento 5">
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 15px;">
+      <button class="cta-pulse">QUERO TER ACESSO AOS VÍDEOS</button>
+    </div>
+  </section>
+
+  <section>
+    <p style="text-align: center; color: #000000; font-size: 24px;"><strong>QUAIS SÃO AS VANTAGENS</strong></span></p>
+    <div>
+      <div class="quadro">
+      <div class="quadro-icon"><i class="fas fa-smile"></i></div>
+      <div class="quadro-title">INÍCIO FÁCIL E RÁPIDO</div>
+      <div class="quadro-text">
+        Ideal para Iniciantes no <strong>MARKETING DIGITAL</strong>, buscando vender no <strong>INSTAGRAM</strong> e <strong>TIKTOK</strong> sem se expor e com automação simplificada.
+      </div>
+    </div>
+    
+    <div class="quadro">
+      <div class="quadro-icon"><i class="fas fa-medal"></i></div>
+      <div class="quadro-title">MATERIAL DE QUALIDADE PREMIUM</div>
+      <div class="quadro-text">
+        Destaque a excelência do conteúdo: oferecemos vídeos de <strong>ALTA QUALIDADE</strong>, cuidadosamente criados para garantir que sua presença online seja <strong>PROFISSIONAL</strong> e <strong>IMPACTANTE</strong>.
+      </div>
+    </div>
+
+    <div class="quadro">
+      <div class="quadro-icon"><i class="fas fa-box"></i></div>
+      <div class="quadro-title">CONTEÚDO PRONTO PARA USO</div>
+      <div class="quadro-text">
+        Acesso a um vasto acervo de vídeos prontos para uso, ideal para quem quer impulsionar seu engajamento e vendas e começar a <strong>FATURAR TODOS OS DIAS</strong>.
+      </div>
+    </div>
+
+    <div class="quadro">
+      <div class="quadro-icon"><i class="fas fa-upload"></i></div>
+      <div class="quadro-title">APENAS SALVAR, EDITAR, SUBIR PARA PÁGINA</div>
+      <div class="quadro-text">
+        O acervo de vídeos requer edições simples para oferecer conteúdo personalizado e autêntico que cativa e converte sua audiência. Uma solução prática para construir seu <strong>IMPÉRIO ONLINE</strong> rapidamente.
+      </div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <p style="text-align: center; color: #ff0000; font-size: 24px;"><strong>🔥 O QUE VOCÊ VAI RECEBER</strong></span></p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">PACK LIFESTYLE MILIONÁRIO</div>
+        <video src="video/Videos-LifeStyle-1.mp4" autoplay loop muted playsinline>
+          </video>
+      </div>
+      <div class="card">
+        <div class="card-title">MULHERES EMPODERADAS</div>
+        <video src="video/VIDEO-20.mp4" autoplay loop muted playsinline>
+          </video>
+      </div>
+      <div class="card">
+        <div class="card-title">PACK DE CARROS</div>
+        <video src="video/Videos-Carros-1.mp4" autoplay loop muted playsinline>
+          </video>
+      </div>
+      <div class="card">
+        <div class="card-title">HOMENS DE PODER</div>
+        <video src="video/V23.mp4" autoplay loop muted playsinline>
+          </video>
+      </div>
+      <div class="card">
+        <div class="card-title">PACK DINHEIRO</div>
+        <video src="video/Video-Dinheiro-3.mp4" autoplay loop muted playsinline>
+          </video>
+      </div>
+    </div>
+    <button class="cta-pulse" style="margin-top:15px;">QUERO TER ACESSO AOS VÍDEOS</button>
+  </section>
+
+  <section class="section" style="background:#000; color:#fff; text-align:center;">
+    <h2 id= "redic" style="color:#ffffff;">ESCOLHA A MELHOR OFERTA PARA VOCÊ!</h2>
+    <div style="background:#111; padding:20px; border-radius:12px; max-width:320px; margin: 0 auto;">
+      <p style="text-decoration: line-through; color:#ccc;">DE R$ 97,00 POR APENAS</p>
+      <h1 style="font-size:2.5em; color:#00c64c;">R$ 9,90</h1>
+      <ul style="text-align:left; list-style:none; padding:0; color:#fff;">
+        <li>✅ Pack Básico</li>
+        <li>✅ Bônus Hashtags Estratégicas</li>
+        <li>✅ Acesso por 8 meses</li>
+      </ul>
+     <a href="https://www.neuroreset.com.br/upsell" class="cta-main" style="margin-top:15px; display:inline-block; padding:10px 20px; background:#00c853; color:#ffffff; text-decoration:none; border-radius:5px;">SIM! QUERO ESSA OPÇÃO</a>
+      <p style="font-size:0.8em; margin-top:10px; color:#f00;">MAS ANTES DE COMPRAR...<br><span style="color:#fff">Temos uma oferta AINDA MAIS vantajosa pra você!<br>Leve mais e pague menos, 97% escolhem a nossa <strong style="color:#f00">MEGA OFERTA!</strong></span></p>
+    </div>
+  </section>
+
+
+  <section class="section" style="background:#000; color:#000000; text-align:center;">
+    <div style="background:#ffffff; padding:20px; border-radius:12px; max-width:320px; margin: 0 auto;">
+      <button  class="cta-red" style="margin-top:15px; ">MAIS ESCOLHIDO</button>
+      <h1 style="font-size:2.0em; color:#f00">MEGA OFERTA</strong></span></h1>
+        
+      <img src="img/mockup.png" alt="Mockup" style="max-width: 280px; margin-top: 20px;">
+
+      <p style="text-decoration: line-through; color:#000000;">DE R357,00 POR APENAS</p>
+      <h1 style="font-size:2.5em; color:#00c64c;">R$ 47,00</h1>
+      <div style="display: flex; justify-content: center; gap:10px; margin-top:10px;">
+      <div id="minutos" style="background:#001f4d; color:#fff; padding:10px 15px; border-radius:5px; font-size:1em;">
+        05<br><small>Minutos</small>
+      </div>
+      <div id="segundos" style="background:#001f4d; color:#fff; padding:10px 15px; border-radius:5px; font-size:1em;">
+        00<br><small>Segundos</small>
+      </div>
+    </div>
+
+    <ul style="list-style:none; padding: 0; max-width: 400px; margin: 0 auto; text-align:left;">
+      <li>✅ Mega Pack com +40 MIL Vídeos <span style="color:red;">R$ 594,97</span></li>
+      <li>✅ Vídeos Virais de Games +100 Vídeos</li>
+      <li>✅ Vídeos Virais de Comédia +150 Vídeos</li>
+      <li>✅ Vídeos Virais de Filmes e Séries +200 Vídeos</li>
+      <li>✅ Vídeos Virais de Memes +60 Vídeos</li>
+      <li>✅ Vídeos Virais de Impactantes +120 Vídeos</li>
+      <li>✅ Cortes Virais de Podcast <span style="color:red;">R$97,00</span></li>
+      <li>✅ Pablo Marçal +80 Cortes</li>
+      <li>✅ Thiago (Primo Rico) +70 Cortes</li>
+      <li>✅ Renato Cariani +60 Cortes</li>
+      <li>✅ E muito mais...</li>
+      <li>✅ Bônus #1 Mulheres Empoderadas +80 Vídeos <span style="color:red;">R$57,97</span></li>
+      <li>✅ Bônus #2 Homens de Poder +40 Vídeos <span style="color:red;">R$57,97</span></li>
+      <li>✅ Bônus #3 Pack de Carros +70 Vídeos <span style="color:red;">R$57,97</span></li>
+      <li>✅ Bônus #4 Pack Dinheiro +80 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #5 Pack Lifestyle Milionário +400 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #6 Lifestyle Academia +100 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #7 Lifestyle Neve +40 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #8 Vídeos de Liberdade +60 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #9 Vídeos Virais Destruindo Células +200 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #10 Vídeos Cortando as Células de Vício <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #11 Glamour +40 Vídeos <span style="color:red;">R$47,97</span></li>
+      <li>✅ Bônus #12 Hashtags Estratégicas</li>
+      <li>✅ Bônus #13 Curso Básico de CupCut</li>
+      <li>✅ Garantia Incondicional de 30 Dias</li>
+      <li>✅ Acesso Imediato e Vitalício</li>
+    </ul>
+      <a href="https://www.ggcheckout.com/checkout/v2/VfPs6l0TlnACbjs3xhF7" class="cta-main" style="margin-top:15px; display:inline-block; padding:10px 20px; background:#00c853; color:#ffffff; text-decoration:none; border-radius:5px;">SIM! QUERO ESSA OPÇÃO</a>
+      <p style="color:#f00"> <strong style="color:#f00">Você não vai encontrar esse preço depois (Restam Apenas 11 Vagas).</strong></span></p>
+  </section>
+
+  <section>
+    <section class="section guarantee">
+      <img src="img/7dias.png" alt="Selo Garantia">
+      <p>Satisfação Garantida por 7 Dias ou seu dinheiro de volta</p>
+    </section>
+    <section class="section" style="background:#f8f8f8; text-align:left; padding: 40px 20px; max-width: 900px; margin:auto;">
+    <h2 style="color:#111; text-align:center;">❓ DÚVIDAS FREQUENTES</h2>
+    <div style="margin-bottom:20px;">
+      <strong>➡️ Por que tão barato?</strong>
+      <p>O objetivo é que as pessoas tenham acesso a conteúdos de alto valor sem precisar pagar rios de dinheiro por isso. Você vai simplesmente receber acesso a um material que muitos players grandes do mercado escondem.</p>
+    </div>
+    <div style="margin-bottom:20px;">
+      <strong>➡️ Em quanto tempo vou ter resultado?</strong>
+      <p>Tem gente que posta e começa a vender no mesmo dia. Claro, depende do seu ritmo e da sua ação. Mas os conteúdos estão todos prontos pra te ajudar a decolar.</p>
+    </div>
+    <div style="margin-bottom:20px;">
+      <strong>➡️ E se eu não tiver tempo pra estudar?</strong>
+      <p>Sem tempo? Sem problema. É só copiar, colar e postar. Nada de enrolação ou curso teórico. Você já entra na prática!</p>
+    </div>
+    <div style="margin-bottom:20px;">
+      <strong>➡️ Como vou receber acesso ao produto?</strong>
+      <p>Após a confirmação de pagamento, você recebe tudo por e-mail em até 5 minutos. É 100% online, rápido e seguro.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    Copyright © 2025 Biblioteca de sucesso. Todos os direitos reservados.<br>
+    Este site não é afiliado ao Facebook™ ou Instagram™.
+  </footer>
+
+  <script src="js/redireciona.js"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > window.innerHeight / 2 && typeof fbq === "function") {
+        fbq('track', 'ViewContent');
+      }
+    }, { once: true });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Botões “Quero ter acesso aos vídeos”
+      document.querySelectorAll('.cta-pulse').forEach(btn => {
+        btn.addEventListener('click', () => {
+          fbq('trackCustom', 'ClickAcessoVideos');
+        });
+      });
+
+      // Botão oferta menor - R$7,40
+      const botaoMenor = document.querySelector('a[href*="neuroreset.com.br/upsell"]');
+      if (botaoMenor) {
+        botaoMenor.addEventListener('click', () => {
+          fbq('trackCustom', 'ClickOfertaMenor');
+        });
+      }
+
+      // Botão MEGA OFERTA - R$47,00
+      const botaoMega = document.querySelector('a[href*="https://www.ggcheckout.com/checkout/v2/VfPs6l0TlnACbjs3xhF7"]');
+      if (botaoMega) {
+        botaoMega.addEventListener('click', () => {
+          fbq('trackCustom', 'ClickMegaOferta');
+          fbq('track', 'InitiateCheckout');
+        });
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const linksCheckout = document.querySelectorAll('a[href*="ggcheckout.com"], a[href*="neuroreset.com.br"]');
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const storedClickId = localStorage.getItem('utmify_click_id');
+
+      linksCheckout.forEach(link => {
+        const url = new URL(link.href);
+        
+        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(param => {
+          const value = urlParams.get(param);
+          if (value) {
+            url.searchParams.set(param, value);
+          }
+        });
+
+        if (storedClickId) {
+          url.searchParams.set('click_id', storedClickId);
+        }
+
+        link.href = url.toString();
+      });
+    });
+  </script>
+
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    async
+    defer
+  ></script>
 </body>
 </html>
